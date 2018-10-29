@@ -1,0 +1,21 @@
+version: "3.2"
+services:
+  voyager:
+    build: .
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - type: bind
+        source: /usr/local/etc/certbot-cloudflare
+        target: /certificates
+      - type: bind
+        source: /data/atnanasi/public_html
+        target: /public_html
+    restart: always
+    networks:
+      - voyager_link
+
+networks:
+  voyager_link:
+    external: true

@@ -1,2 +1,2 @@
-FROM nginx:latest-alpine
-ADD voyager-config /etc/nginx
+FROM nginx:stable-alpine
+ADD ./voyager-config /etc/nginx
