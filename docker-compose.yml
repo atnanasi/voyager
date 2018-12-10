@@ -3,8 +3,8 @@ services:
   voyager:
     build: .
     ports:
-      - 80:80
-      - 443:443
+      - '80:80'
+      - '443:443'
     volumes:
       - type: bind
         source: /usr/local/etc/certbot-cloudflare
